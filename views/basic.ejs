@@ -51,15 +51,24 @@
   <i class="fa-solid fa-location-dot"></i>
 </header>
 
+
 <div class="album py-5 bg-light">
+
   <div class="container">
 
     <div class="row">
+      <%= result.forEach (function (item) { { %>
+
+        
+
+      
+        
+   
       <div class="col-md-4">
         <div class="card mb-4 box-shadow">
           <img class="card-img-top" src="images/bahubali.jpg" alt="Card image cap">
           <div class="card-body">
-            <p class="card-text"> Bahubali</p>
+            <p class="card-text"><%= item.moviename %> </p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
             
@@ -73,7 +82,9 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4">
+
+   <% }); %> 
+      <!-- <div class="col-md-4">
         <div class="card mb-4 box-shadow">
           <img class="card-img-top" src="images/bahubali.jpg" alt="Card image cap">
           <div class="card-body">
@@ -197,7 +208,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 <div class="container">
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
     <div class="col-md-4 d-flex align-items-center">
