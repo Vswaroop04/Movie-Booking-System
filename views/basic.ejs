@@ -32,7 +32,7 @@
           &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
           &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
           <a class="nav-link active" aria-current="page" href="#">Home</a>
-          <a class="nav-link" href="#">Movies</a><a class="nav-link" href="#">Theatres</a>
+          <a class="nav-link" href="/">Movies</a><a class="nav-link" href="/booknow">Theatres</a>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="fa-solid fa-location-dot"></i> Diu
@@ -57,7 +57,7 @@
   <div class="container">
 
     <div class="row">
-      <%= result.forEach (function (item) { { %>
+      <% result.forEach (function (item) { %>
 
         
 
@@ -69,6 +69,8 @@
           <img class="card-img-top" src="images/bahubali.jpg" alt="Card image cap">
           <div class="card-body">
             <p class="card-text"><%= item.moviename %> </p>
+            <p class="card-text"> <%= item.moviedesc %>  </p>
+            <p class="card-text"> <%= item.cast %>  </p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
             
@@ -78,137 +80,14 @@
                 
               </div>
               <small class="text-muted">Hindi</small>
+              <small class="text-muted"><%= item.releasedate %> </small>
             </div>
           </div>
         </div>
       </div>
 
    <% }); %> 
-      <!-- <div class="col-md-4">
-        <div class="card mb-4 box-shadow">
-          <img class="card-img-top" src="images/bahubali.jpg" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text">Bahubali</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" onclick="location.href='/booknow'" class="btn btn-sm btn-outline-secondary" >   Book Now    </button>
-                
-              </div>
-              <small class="text-muted">Hindi</small>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card mb-4 box-shadow">
-          <img class="card-img-top" src="images/bahubali.jpg" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text">Bahubali</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" onclick="location.href='/booknow'" class="btn btn-sm btn-outline-secondary" >   Book Now    </button>
-                
-              </div>
-              <small class="text-muted">Hindi</small>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card mb-4 box-shadow">
-          <img class="card-img-top" src="images/bahubali.jpg" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text">Bahubali</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" onclick="location.href='/booknow'" class="btn btn-sm btn-outline-secondary" >   Book Now    </button>
-                
-              </div>
-              <small class="text-muted">Hindi</small>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card mb-4 box-shadow">
-          <img class="card-img-top" src="images/bahubali.jpg" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text">Bahubali</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" onclick="location.href='/booknow'" class="btn btn-sm btn-outline-secondary" >   Book Now    </button>
-                
-              </div>
-              <small class="text-muted">Hindi</small>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card mb-4 box-shadow">
-          <img class="card-img-top" src="images/bahubali.jpg" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text">Bahubali</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" onclick="location.href='/booknow'" class="btn btn-sm btn-outline-secondary" >   Book Now    </button>
-                
-              </div>
-              <small class="text-muted">Hindi</small>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card mb-4 box-shadow">
-          <img class="card-img-top" src="images/bahubali.jpg" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text">Bahubali</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" onclick="location.href='/booknow'" class="btn btn-sm btn-outline-secondary" >   Book Now    </button>
-                
-              </div>
-              <small class="text-muted">Hindi</small>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card mb-4 box-shadow">
-          <img class="card-img-top" src="images/bahubali.jpg" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text">Bahubali</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" onclick="location.href='/booknow'" class="btn btn-sm btn-outline-secondary" >   Book Now    </button>
-                
-              </div>
-              <small class="text-muted">Hindi</small>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card mb-4 box-shadow">
-          <img class="card-img-top" src="images/bahubali.jpg" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text">Bahubali</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" onclick="location.href='/booknow'" class="btn btn-sm btn-outline-secondary" >   Book Now    </button>
-                
-              </div>
-              <small class="text-muted">Hindi</small>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
+      
 <div class="container">
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
     <div class="col-md-4 d-flex align-items-center">

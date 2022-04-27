@@ -32,7 +32,7 @@
           &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
           &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
           <a class="nav-link active" aria-current="page" href="#">Home</a>
-          <a class="nav-link" href="#">Movies</a><a class="nav-link" href="#">Theatres</a>
+          <a class="nav-link" href="/">Movies</a><a class="nav-link" href="/booknow">Theatres</a>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="fa-solid fa-location-dot"></i> Diu
@@ -61,21 +61,27 @@
     </div>
   </div>
   </div>
+  <% result.forEach (function (item) { %>
 
-  <div class="cards">
-    <p class="card-text">Capital Cinemas Diu</p>
-    <div class="d-flex justify-content-between align-items-center">
-      <div class="btn-group">
-        <button type="button" onclick="location.href='/process'" name="mrng" value="10:30 AM" class="btn btn-sm btn-outline-secondary" >  10:30 AM  <span class="ai-magnet"></span> </button>
-        <button type="button" onclick="location.href='/process'" name="aftr" value="2:30 PM"  class="btn btn-sm btn-outline-secondary" >  2:30 PM <span class="ai-magnet"></span> </button>
-        <button type="button" onclick="location.href='/process'" name="evng" value="6:30 PM" class="btn btn-sm btn-outline-secondary" >  6:30 PM  <span class="ai-magnet"></span> </button>
-        <button type="button" onclick="location.href='/process'" name="nyt" value="9:45 PM" class="btn btn-sm btn-outline-secondary" >  9:45 PM  <span class="ai-magnet"></span> </button>
+    <div class="cards">
+      <p class="card-text"><%= item.theatre_name  %> </p>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="btn-group">
+          <button type="button" onclick="location.href='/process'" name="mrng" value="10:30 AM" class="btn btn-sm btn-outline-secondary" >  10:30 AM  <span class="ai-magnet"></span> </button>
+          <button type="button" onclick="location.href='/process'" name="aftr" value="2:30 PM"  class="btn btn-sm btn-outline-secondary" >  2:30 PM <span class="ai-magnet"></span> </button>
+          <button type="button" onclick="location.href='/process'" name="evng" value="6:30 PM" class="btn btn-sm btn-outline-secondary" >  6:30 PM  <span class="ai-magnet"></span> </button>
+          <button type="button" onclick="location.href='/process'" name="nyt" value="9:45 PM" class="btn btn-sm btn-outline-secondary" >  9:45 PM  <span class="ai-magnet"></span> </button>
+          
+        </div>
         
       </div>
-      
     </div>
-  </div>
-  <div class="cards">
+
+
+
+ <% }); %> 
+  
+  <!-- <div class="cards">
     <p class="card-text">PVR Cinemas Diu</p>
     <div class="d-flex justify-content-between align-items-center">
       <div class="btn-group">
@@ -102,7 +108,7 @@
       </div>
       
     </div>
-  </div>
+  </div> -->
   </section>
 
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">

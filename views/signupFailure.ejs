@@ -1,0 +1,50 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title>VINKS</title>
+      <link rel="icon" type="image/x-icon" href="/public/images/favicon.ico">
+      <!-- fontawesome -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+   
+  <!-- css-stylesheet -->
+  
+  <link rel="stylesheet" href="css/styles3.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </head>
+
+  <body class="text-center">
+    <div class="container">
+        <div class="alert alert-danger" role="alert">
+            Sorry, this <strong>Email</strong> has already exist !
+          </div>
+        <form class="form" action="/signup" method="post">
+
+
+            <label for="fname">Name:</label><br>
+            <input type="text" id="fname" name="name"><br>
+            <label for="fname">UserId:</label><br>
+            <input type="text" id="fname" name="userid"><br>
+
+            <label for="email">E-mail:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="password">Password:</label><br>
+            <input type="password"  name="password"><br>
+            <br>
+
+            <input type="submit" name="Create" placeholder="Create"class="btn btn-warning">
+            <br>
+            <br>
+            <a class="btn btn-outline-secondary" href="/login">Already have an account</a>
+        </form>
+    </div>
+  </body>
+</html>
+
+
